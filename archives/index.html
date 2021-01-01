@@ -21,7 +21,7 @@
 
   <!-- 页面元数据 -->
   
-  <title>归档 - Comit</title>
+  <title>Archive - Comit</title>
   
 
   
@@ -178,7 +178,7 @@
                   
                     id="about"
                   >
-                  <i class='fas fa-coffee fa-fw'></i>关于
+                  <i class='fas fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -292,7 +292,7 @@
                   
                     id="about"
                   >
-                  <i class='fas fa-coffee fa-fw'></i>关于
+                  <i class='fas fa-info-circle fa-fw'></i>关于
                 </a>
                 
               </li>
@@ -589,7 +589,7 @@
       
     
       
-        <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+        <div><p>Blog content follows the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
 </div>
       
     
@@ -601,9 +601,9 @@
       
     
       
-        本站使用
+        Use
         <a href="https://github.com/volantis-x/hexo-theme-volantis/tree/4.2.0" target="_blank" class="codename">Volantis</a>
-        作为主题
+        as theme
       
     
       
@@ -1016,7 +1016,7 @@ function setSearchService() {
       // 请求 PV 并自增
       var pvCtn = document.querySelector('#lc-sv');
       if (pvCtn || enableIncr) {
-        var pvGetter = this.getRecord(Counter, 'https://comiting.github.com' + '/#lc-sv', 'Visits').then((record) => {
+        var pvGetter = this.getRecord(Counter, 'https://comiting.github.io' + '/#lc-sv', 'Visits').then((record) => {
           incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-sv #number');
           if (eles.length > 0) {
@@ -1034,7 +1034,7 @@ function setSearchService() {
       // 请求 UV 并自增
       var uvCtn = document.querySelector('#lc-uv');
       if (uvCtn || enableIncr) {
-        var uvGetter = this.getRecord(Counter, 'https://comiting.github.com' + '/#lc-uv', 'Visitors').then((record) => {
+        var uvGetter = this.getRecord(Counter, 'https://comiting.github.io' + '/#lc-uv', 'Visitors').then((record) => {
           var vuv = this.validUV();
           vuv && incrArr.push(this.buildIncrement(record.objectId))
           var eles = document.querySelectorAll('#lc-uv #number');
@@ -1056,7 +1056,7 @@ function setSearchService() {
         for (i = 0; i < allPV.length; i++) {
           let pv = allPV[i];
           let title = pv.getAttribute('data-title');
-          var url = 'https://comiting.github.com' + pv.getAttribute('data-path');
+          var url = 'https://comiting.github.io' + pv.getAttribute('data-path');
           if (url) {
             var viewGetter = this.getRecord(Counter, url, title).then((record) => {
               // 是当前页面就自增
